@@ -1,0 +1,12 @@
+= requeus
+
+Requeus is a library for proxying http requests via queue (currently supports Amazon SQS and RabbitMQ).
+It consists of two parts:
+* client for adding request to queue
+* and background worker for processing queue
+
+== Copyright
+
+Copyright (c) 2011 Ilia Ablamonov, Anatoliy Plastinin, Cloud Castle Inc. See LICENSE.txt for
+further details.
+
