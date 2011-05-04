@@ -13,7 +13,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "requeus"
-  gem.homepage = "http://github.com/antlypls/requeus"
+  gem.homepage = "http://github.com/cloudcastle/requeus"
   gem.license = "MIT"
   gem.summary = %Q{requeus}
   gem.description = %Q{requeus gem is a library for proxying requests}
