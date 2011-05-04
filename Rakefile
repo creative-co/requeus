@@ -25,10 +25,11 @@ Jeweler::Tasks.new do |gem|
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
 
-  gem.add_runtime_dependency 'aws', '~> 2.3.34'
-  gem.add_runtime_dependency 'carrot', '~> 0.8.1'
-  gem.add_runtime_dependency 'daemons', '~> 1.0.10'
-  gem.add_runtime_dependency 'multipart-post', '~> 1.1.0'
+  #see gem file for dependencies
+  #gem.add_runtime_dependency 'aws', '~> 2.3.34'
+  #gem.add_runtime_dependency 'carrot', '~> 0.8.1'
+  #gem.add_runtime_dependency 'daemons', '~> 1.0.10'
+  #gem.add_runtime_dependency 'multipart-post', '~> 1.1.0'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
