@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = %Q{requeus}
   gem.description = %Q{requeus gem is a library for proxying requests}
   gem.email = "antlypls@gmail.com"
-  gem.authors = ["Ilia Ablamonov", "Anatoliy Plastinin", "Cloud Castle Inc."]
+  gem.authors = ["Ilia Ablamonov", "Sergey Aksyutin","Anatoliy Plastinin", "Cloud Castle Inc."]
 
   gem.files = FileList['lib/**/*.*', 'LICENSE.txt', 'README.rdoc', 'requeus.gemspec']
 
