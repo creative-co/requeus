@@ -4,8 +4,8 @@ module Requeus
   class Impl
     include Singleton
 
-    def request queue, method, path, params, headers
-      r = Requeus::Request.new(method, path, params, headers).to_json
+    def request queue, method, path, params, headers, force_endpoint
+      r = Requeus::Request.new(method, path, params, headers, force_endpoint).to_json
       server_sequence.any? {|q| q.put(queues[queue].name, r)}
     end
 

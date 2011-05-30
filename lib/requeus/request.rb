@@ -7,11 +7,12 @@ module ActionDispatch; module Http; class UploadedFile; end; end; end
 
 module Requeus
   class Request
-    def initialize method, path, params, headers, file_uids = nil
+    def initialize method, path, params, headers, force_endpoint, file_uids = nil
       @method = method
       @path = path
       @params  = params.reject{|_, v| as_file(v)}
       @headers = headers
+      @force_endpoint = force_endpoint
       
       if file_uids
         @files = file_uids
@@ -23,11 +24,11 @@ module Requeus
     
     def self.from_json json
       r = JSON.parse(json)
-      new r['method'], r['path'], r['params'], r['headers'], r['files']
+      new r['method'], r['path'], r['params'], r['headers'], r['force_endpoint'], r['files']
     end
     
     def do_request endpoint
-      uri = URI.parse endpoint + @path
+      uri = URI.parse(("http://#{@force_endpoint}" || endpoint) + @path)
 
       req_klass = case @method.upcase
         when 'GET'

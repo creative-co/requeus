@@ -8,8 +8,13 @@ require 'requeus/railtie' if defined?(Rails)
 
 module Requeus
   class << self
-    def request queue, method, path, params = {}, headers = {}
-      Requeus::Impl.instance.request queue, method, path, params, headers
+    # extra_args can be
+    # :headers
+    #:force_endpoint
+    def request queue, method, path, params = {}, extra_args = {}
+      headers = extra_args[:headers] || {}
+      force_endpoint = extra_args[:force_endpoint]
+      Requeus::Impl.instance.request queue, method, path, params, headers, force_endpoint
     end
 
     def start_workers
