@@ -109,7 +109,7 @@ module Requeus
       params.each do |k, v|
         if v.is_a?(Hash)
           v.each do |k1, v1|
-            result["#{k.to_s}[#{k1.to_s}]"] = v1
+            result["#{k.to_s}[#{k1.to_s}]"] = (v1.is_a?(Hash) || v1.is_a?(Array)) ? v1.to_json : v1
           end
         else
           result[k.to_s] = v
