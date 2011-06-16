@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{requeus}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ilia Ablamonov", "Sergey Aksyutin", "Anatoliy Plastinin", "Cloud Castle Inc."]
-  s.date = %q{2011-05-30}
+  s.date = %q{2011-06-16}
   s.description = %q{requeus gem is a library for proxying requests}
   s.email = %q{antlypls@gmail.com}
   s.extra_rdoc_files = [
